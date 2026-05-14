@@ -1,0 +1,16 @@
+# Librerías de Arduino
+libraries/
+
+# Archivos de compilación que Arduino genera
+**/build/
+**/*.bin
+**/*.elf
+**/*.hex
+
+# Archivos temporales
+**/*.bak
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
