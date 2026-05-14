@@ -8,9 +8,7 @@ electrónica desde cero hasta nivel intermedio-avanzado.
 ### ESP32
 | Práctica | Descripción |
 |----------|-------------|
-| practica1-blink | LED parpadeando, estructura básica |
-| practica2-toggle-button | Toggle con Bounce2 |
-| practica3-pwm | Control de brillo con PWM |
+| practica1-toggle-button | Toggle con Bounce2 |
 
 ## Hardware
 - ESP32 WROOM 32 de 38 pines
