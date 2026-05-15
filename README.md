@@ -9,6 +9,7 @@ electrónica desde cero hasta nivel intermedio-avanzado.
 | Práctica | Descripción |
 |----------|-------------|
 | practica1-toggle-button | Toggle con Bounce2 |
+| practica2-lectura-analoga | Control de brillo con potenciómetro y map() |
 
 ## Hardware
 - ESP32 WROOM 32 de 38 pines
