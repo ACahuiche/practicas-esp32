@@ -7,7 +7,8 @@
 #define LEDNORMAL 5
 
 DHT dht(DHTPIN, DHTTYPE);
-
+unsigned long ultimaLectura = 0;
+const unsigned long intervalo = 2000;
 
 void setup() {
   Serial.begin(115200);
@@ -19,39 +20,41 @@ void setup() {
 }
 
 void loop() {
-  delay(2000);
+  if(millis() - ultimaLectura >= intervalo){
+    ultimaLectura = millis();
 
-  float temperatura = dht.readTemperature();
-  float humedad     = dht.readHumidity();
+    float temperatura = dht.readTemperature();
+    float humedad     = dht.readHumidity();
 
-  if(isnan(temperatura) || isnan(humedad)){
-    Serial.println("Error leyendo el DHT11");
-    return;
+    if(isnan(temperatura) || isnan(humedad)){
+      Serial.println("Error leyendo el DHT11");
+      return;
+    }
+
+    if(temperatura >= 30.00){
+      digitalWrite(LEDCALOR, HIGH);
+      digitalWrite(LEDNORMAL, LOW);
+      digitalWrite(LEDFRIO,   LOW);
+    }
+    else if(temperatura <= 10.00){
+      digitalWrite(LEDFRIO,   HIGH);
+      digitalWrite(LEDNORMAL, LOW);
+      digitalWrite(LEDCALOR,  LOW);
+    }
+    else {
+      digitalWrite(LEDNORMAL, HIGH);
+      digitalWrite(LEDCALOR,  LOW);
+      digitalWrite(LEDFRIO,   LOW);
+    }
+
+    Serial.print("Temperatura: ");
+    Serial.print(temperatura);
+    Serial.println(" °C");
+
+    Serial.print("Humedad: ");
+    Serial.print(humedad);
+    Serial.println(" %");
+
+    Serial.println("─────────────────");
   }
-
-  if(temperatura >= 30.00){
-  digitalWrite(LEDCALOR, HIGH);
-  digitalWrite(LEDNORMAL, LOW);
-  digitalWrite(LEDFRIO,   LOW);
-}
-else if(temperatura <= 10.00){
-  digitalWrite(LEDFRIO,   HIGH);
-  digitalWrite(LEDNORMAL, LOW);
-  digitalWrite(LEDCALOR,  LOW);
-}
-else {
-  digitalWrite(LEDNORMAL, HIGH);
-  digitalWrite(LEDCALOR,  LOW);
-  digitalWrite(LEDFRIO,   LOW);
-}
-
-  Serial.print("Temperatura: ");
-  Serial.print(temperatura);
-  Serial.println(" °C");
-
-  Serial.print("Humedad: ");
-  Serial.print(humedad);
-  Serial.println(" %");
-
-  Serial.println("─────────────────");
 }
