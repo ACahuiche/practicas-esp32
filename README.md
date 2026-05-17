@@ -11,6 +11,7 @@ electrónica desde cero hasta nivel intermedio-avanzado.
 | practica1-toggle-button | Toggle con Bounce2 |
 | practica2-lectura-analoga | Control de brillo con potenciómetro y map() |
 | practica3-potenciometro-dos-leds | Control de dos LEDs con potenciómetro, map() y constrain() |
+| practica4-dht11-leds-temperatura | DHT11 con LEDs indicadores de temperatura |
 
 ## Hardware
 - ESP32 WROOM 32 de 38 pines
