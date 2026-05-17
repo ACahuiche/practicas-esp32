@@ -1,4 +1,4 @@
-# Práctica 3 — Control de Brillo con Potenciómetro y Dos LEDs
+# Control de Brillo con Potenciómetro y Dos LEDs
 
 ## Descripción
 Control de brillo de dos LEDs usando un potenciómetro.
