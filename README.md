@@ -17,6 +17,7 @@ electrónica desde cero hasta nivel intermedio-avanzado.
 | [practica7-oled-dht11-temperatura](https://github.com/ACahuiche/practicas-esp32/tree/main/lector_temperatura_oled) | Termómetro ambiental con OLED y DHT11 |
 | [practica8-pir-detector-movimiento](https://github.com/ACahuiche/practicas-esp32/tree/main/sensor_movimiento) | PIR SR501 con contador de movimientos |
 | [practica9-sensor-tactil-ttp223b](https://github.com/ACahuiche/practicas-esp32/tree/main/sensor_tactil) | TTP223B con ciclo de brillo por toque |
+| [practica10-sensor-vibracion-sw420](https://github.com/ACahuiche/practicas-esp32/tree/main/sensor_vibracion) | SW-420 con contador y timestamp de vibraciones |
 
 ## Hardware
 - ESP32 WROOM 32 de 38 pines
