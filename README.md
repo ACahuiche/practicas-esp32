@@ -13,6 +13,7 @@ electrónica desde cero hasta nivel intermedio-avanzado.
 | practica3-potenciometro-dos-leds | Control de dos LEDs con potenciómetro, map() y constrain() |
 | practica4-dht11-leds-temperatura | DHT11 con LEDs indicadores de temperatura |
 | practica5-hcsr04-distancia | HC-SR04 con LEDs indicadores de proximidad |
+| practica6-oled-contador | Pantalla OLED SSD1306 con contador 0-100 |
 
 ## Hardware
 - ESP32 WROOM 32 de 38 pines
